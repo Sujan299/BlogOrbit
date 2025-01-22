@@ -1,6 +1,6 @@
 import React from 'react'
 import Login from './pages/admin/Login.jsx'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 
 
 // admin pages and components
@@ -39,7 +39,7 @@ const App = () => {
   }
   return (
 
-    <div className='px-48'>
+    <div className='xl:px-48 lg:px-24'>
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -69,6 +69,7 @@ const App = () => {
             <Route path='/admin/logout' element={<Logout />} />
 
             {/* user routes */}
+            <Route path='/' element={<Navigate to='/home'/>}/>
             <Route path='/home' element={<Home />} />
             <Route path='/categories' element={<Categories />} />
             <Route path='/categories/category/:id' element={<Category />} />

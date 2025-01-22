@@ -3,10 +3,10 @@ import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 function Footer() {
   return (
     <footer className="py-6">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <div className="flex justify-between items-center flex-col md:flex-row px-8 gap-4">
         {/* Branding */}
         <div>
-          <h1 className="text-lg font-bold text-white">BloggingApp</h1>
+          <h1 className="text-lg font-bold text-black">BloggingApp</h1>
           <p className="text-sm text-gray-400">Sharing ideas and stories, one blog at a time.</p>
         </div>
 
