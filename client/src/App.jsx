@@ -30,6 +30,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
+  const [stateChange, setStateChange] = useState(false);
   const GoogleAuthWrapper = () => {
     return (
       <GoogleOAuthProvider clientId='410849405245-a0k9kkq4g3ssecl4fv5sukc0vhh3rrf4.apps.googleusercontent.com'>
@@ -55,7 +56,7 @@ const App = () => {
       />
       <div>
         <Router>
-          <Navbar />
+          <Navbar/>
           <Routes>
             {/* admin routes */}
             <Route path='/admin/login' element={<Login />} />

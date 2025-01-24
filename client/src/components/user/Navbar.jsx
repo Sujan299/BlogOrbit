@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useStae} from 'react'
 import { Link } from 'react-router-dom';
 import { MdAccountCircle } from "react-icons/md";
 import { CiMenuFries } from "react-icons/ci";
@@ -7,6 +7,8 @@ import { UserContext } from '../../contexts/UserContext';
 import { useLocation } from 'react-router-dom'
 
 const MobileNav = ({ user, menuClick, handleLogout }) => {
+  // only to re-render navbar when user logout and login
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   return (
     <div className={`fixed w-[50vw] h-[50vh] top-24 bg-blue-400 left-0 z-10 rounded-e-lg`}>
       <nav className='w-full h-full'>
@@ -66,8 +68,8 @@ const Navbar = () => {
   }, [])
   const handleLogout = () => {
     localStorage.removeItem("user-info");
-    // window.location.reload();
     navigate("/");
+    setIsLoggedIn(!isLoggedIn);
   }
   const menuClick = () => {
     setShowNav(!showNav);
