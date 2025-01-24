@@ -67,7 +67,7 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.removeItem("user-info");
     window.location.reload();
-    navigate("/home");
+    navigate("/");
   }
   const menuClick = () => {
     setShowNav(!showNav);
