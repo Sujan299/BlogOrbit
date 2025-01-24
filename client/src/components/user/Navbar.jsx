@@ -56,6 +56,7 @@ const Navbar = () => {
   const location = useLocation();
   const path = location.pathname;
   const [showNav, setShowNav] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
   useEffect(() => {
     const setData = () => {
       const data = localStorage.getItem("user-info");
@@ -67,6 +68,7 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.removeItem("user-info");
     navigate("/");
+    setIsLoggedIn(!isLoggedIn);
   }
   const menuClick = () => {
     setShowNav(!showNav);
