@@ -1,4 +1,4 @@
-import React,{useStae} from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
 import { MdAccountCircle } from "react-icons/md";
 import { CiMenuFries } from "react-icons/ci";
