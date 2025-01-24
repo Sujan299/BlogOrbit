@@ -62,13 +62,14 @@ const Navbar = () => {
       const data = localStorage.getItem("user-info");
       const userData = JSON.parse(data);
       setUser(userData);
+      setIsLoggedIn(true);
     }
     setData();
   }, [])
   const handleLogout = () => {
     localStorage.removeItem("user-info");
     navigate("/");
-    setIsLoggedIn(!isLoggedIn);
+    setIsLoggedIn(false);
   }
   const menuClick = () => {
     setShowNav(!showNav);
@@ -101,7 +102,7 @@ const Navbar = () => {
         </li>
         <li>
           {
-            user ?
+            (user && isLoggedIn) ?
               <div className="flex justify-center">
                 <button
                   onClick={handleLogout}

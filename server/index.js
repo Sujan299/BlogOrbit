@@ -13,7 +13,7 @@ import categoriesRoutes from './routes/catergories.route.js'
 import booksRoutes from './routes/book.route.js';
 import uploadRoutes from './routes/upload.route.js'
 // googleAuth
-import googleAuthRoutes from './routes/googleAuth.route.js';
+import googleAuthRoutes from './routes/googleAuth.route.js'; 
 
 //comment
 import commentRoutes from './routes/comment.route.js';
