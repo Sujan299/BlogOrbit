@@ -8,7 +8,7 @@ function Books() {
   useEffect(() => {
     const getBooks = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/books/");
+        const response = await axios.get("https://blogorbit.onrender.com/books/");
         if (response.status === 200) {
           setBooks(response.data);
         }

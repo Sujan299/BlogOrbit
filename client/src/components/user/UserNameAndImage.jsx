@@ -6,7 +6,7 @@ const UserNameAndImage = ({ userId }) => {
   const [conditionGoogleLogin, setCondition] = useState(true);
   useEffect(() => {
     const getUser = async () => {
-      const response = await axios.get(`http://localhost:3000/users/user/${userId}`)
+      const response = await axios.get(`https://blogorbit.onrender.com/users/user/${userId}`)
       // console.log(response.data);
       if (response.data.username) {
         setCondition(false);

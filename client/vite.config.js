@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/socket.io": {
-        target: "http://localhost:3000", // Backend URL
+        target: "https://blogorbit.onrender.com", // Backend URL
         changeOrigin: true,
         ws: true, // Enable WebSocket proxying
       },

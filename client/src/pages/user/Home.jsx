@@ -27,7 +27,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/posts/get_all_posts/",
+        const response = await axios.get("https://blogorbit.onrender.com/posts/get_all_posts/",
           {
             withCredentials: true
           }

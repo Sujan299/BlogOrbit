@@ -18,7 +18,7 @@ const Signup = () => {
         console.log(profile_picture)
 
         try {
-            const response = await axios.post("http://localhost:3000/users/signup",
+            const response = await axios.post("https://blogorbit.onrender.com/users/signup",
                 {
                     username, email, password, profile_picture, bio
                 },

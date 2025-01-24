@@ -15,7 +15,7 @@ const Login = () => {
         try {
             if (authResult['code']) {
                 const result = await googleAuth(authResult.code);
-                // const result = await axios.get(`http://localhost:3000/auth/google?code=${authResult.code}`)
+                // const result = await axios.get(`https://blogorbit.onrender.com/auth/google?code=${authResult.code}`)
                 const { email, name, image } = result.data.user;
                 const token = result.data.token;
                 const obj = {
@@ -45,7 +45,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post("http://localhost:3000/users/login",
+            const response = await axios.post("https://blogorbit.onrender.com/users/login",
                 {
                     email, password
                 },

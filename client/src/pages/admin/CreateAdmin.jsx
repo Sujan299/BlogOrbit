@@ -13,7 +13,7 @@ const CreateAdmin = () => {
   const createAdmin = async (e) => {
     e.preventDefault();
 
-    const response = await axios.post("http://localhost:3000/admin/create_admin",
+    const response = await axios.post("https://blogorbit.onrender.com/admin/create_admin",
       {
         username,
         password,

@@ -30,7 +30,7 @@ const CreatePost = () => {
       const formData = new FormData();
       formData.append("image", file);
       try {
-        const response = await axios.post("http://localhost:3000/api/upload",
+        const response = await axios.post("https://blogorbit.onrender.com/api/upload",
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" }
@@ -74,7 +74,7 @@ const CreatePost = () => {
     console.log('Editor Content:', content); // Save or process the editor content
 
     try {
-      const response = await axios.post("http://localhost:3000/posts/create_post",
+      const response = await axios.post("https://blogorbit.onrender.com/posts/create_post",
         {
           title,
           image,
@@ -104,7 +104,7 @@ const CreatePost = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/admin/create_post",
+        const response = await axios.get("https://blogorbit.onrender.com/admin/create_post",
           {
             withCredentials: true
           }

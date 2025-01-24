@@ -11,7 +11,7 @@ const BlogPostPage = () => {
   const [post, setPost] = useState({});
   useEffect(() => {
     const getPost = async () => {
-      const response = await axios.get(`http://localhost:3000/posts/get_a_post/${id}`);
+      const response = await axios.get(`https://blogorbit.onrender.com/posts/get_a_post/${id}`);
       if (response.status === 200) {
         console.log(response.data);
         setPost(response.data);

@@ -9,7 +9,7 @@ const BookDetails = () => {
     useEffect(()=>{
         const getBook = async()=>{
            try{
-            const response = await axios.get(`http://localhost:3000/books/book/${id}`);
+            const response = await axios.get(`https://blogorbit.onrender.com/books/book/${id}`);
             if(response.status===200){
                 console.log(response.data);
                 setBook(response.data);

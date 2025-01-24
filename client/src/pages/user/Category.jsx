@@ -8,7 +8,7 @@ const Category = () => {
     const [category, setCategory] = useState({});
     useEffect(()=>{
         const getCategory = async()=>{
-            const response = await axios.get(`http://localhost:3000/categories/category/${id}`);
+            const response = await axios.get(`https://blogorbit.onrender.com/categories/category/${id}`);
             if(response.status===200){
                 console.log(response.data);
                 setCategory(response.data);

@@ -5,7 +5,7 @@ const GetAuthor = ({authorId}) => {
     const [author, setAuthor] = useState("");
     useEffect(() => {
         const getAuthorName = async () => {
-            const response = await axios.get(`http://localhost:3000/admin/author/${authorId}`);
+            const response = await axios.get(`https://blogorbit.onrender.com/admin/author/${authorId}`);
             setAuthor(response.data.username);
         }
         getAuthorName();

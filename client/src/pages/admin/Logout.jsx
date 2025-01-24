@@ -9,7 +9,7 @@ const Logout = () => {
 
     useEffect(() => {
         const logout = async () => {
-            const response = await axios.post("http://localhost:3000/admin/logout", {}, { withCredentials: true });
+            const response = await axios.post("https://blogorbit.onrender.com/admin/logout", {}, { withCredentials: true });
             console.log(response.data);
             if (response.status === 200) {
                 navigate("/admin/login");
