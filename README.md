@@ -1,4 +1,4 @@
-# NPL-news application
+# BlogOrbit
 
 ## Description
 A fullstack project, where admin can post articles using rich text editor. As we know NPL is getting more attraction that's why this app is for making easier to npl fans.
