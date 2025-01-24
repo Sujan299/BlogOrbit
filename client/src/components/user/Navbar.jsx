@@ -56,8 +56,6 @@ const Navbar = () => {
   const location = useLocation();
   const path = location.pathname;
   const [showNav, setShowNav] = useState(false)
-  // only to re-render navbar when user logout and login
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
   useEffect(() => {
     const setData = () => {
       const data = localStorage.getItem("user-info");
@@ -69,7 +67,6 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.removeItem("user-info");
     navigate("/");
-    setIsLoggedIn(!isLoggedIn);
   }
   const menuClick = () => {
     setShowNav(!showNav);
