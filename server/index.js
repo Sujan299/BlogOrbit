@@ -34,7 +34,7 @@ const server = http.createServer(app);
 const io = new Server(server,
   {
     cors: {
-      origin: "https://blog-orbit.vercel.app",
+      origin: "https://blog-orbit-drab.vercel.app",
       methods: ["GET", "POST"],
       credentials: true,
     },
@@ -46,7 +46,7 @@ app.use(express.json());
 app.use(cookieParser()); // it parses incomming cookies from http
 app.use(
     cors({
-      origin: "https://blog-orbit.vercel.app",
+      origin: "https://blog-orbit-drab.vercel.app",
       credentials: true,
     })
   );
