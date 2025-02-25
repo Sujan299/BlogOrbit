@@ -1,5 +1,5 @@
 # BlogOrbit
-# Live link : https://blog-orbit-drab.vercel.app/home
+# Live link : https://blog-orbit-drab.vercel.app
 ## Description
 A fullstack project, where admin can post articles using rich text editor. As we know NPL is getting more attraction that's why this app is for making easier to npl fans.
 
